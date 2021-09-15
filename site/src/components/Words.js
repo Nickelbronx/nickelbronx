@@ -12,9 +12,9 @@ import {
   PromoLab,
   AppLab,
   ExpLab,
-} from './letters'
+} from './animatedWords'
 
-const Letters = (props) => {
+const Words = (props) => {
   useEffect(() => {
     if (typeof window !== `undefined`) {
       gsap.registerPlugin(DrawSVGPlugin)
@@ -685,4 +685,4 @@ const Letters = (props) => {
   )
 }
 
-export default Letters
+export default Words

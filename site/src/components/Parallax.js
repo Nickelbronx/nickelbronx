@@ -6,8 +6,7 @@ import BgImage from './images/BgImage'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
-import Letters from './Letters'
+import Words from './Words'
 
 import { FormDown } from 'grommet-icons'
 
@@ -87,7 +86,7 @@ const Parallax = (props) => {
               this is your{' '}
             </h1>
             <div className="letters">
-              <Letters />
+              <Words />
             </div>
           </Container>
           <h2 className="textTwo">
