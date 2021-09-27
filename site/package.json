@@ -76,5 +76,11 @@
     "styled-icons": "^10.2.1",
     "theme-ui": "^0.3.1",
     "typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "gatsby-plugin-postcss": "^4.14.0",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16"
   }
 }

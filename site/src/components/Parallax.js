@@ -83,11 +83,23 @@ const Parallax = (props) => {
                 visibility: 'hidden',
               }}
             >
-              this is your{' '}
+              we give{' '}
             </h1>
             <div className="letters">
               <Words />
             </div>
+            <h1 className="textOne !block">
+              an unfair{' '}
+              <span
+                className="!text-black"
+                sx={{
+                  WebkitTextStrokeWidth: '1px',
+                  WebkitTextStrokeColor: 'white',
+                }}
+              >
+                advantage
+              </span>
+            </h1>
           </Container>
           <h2 className="textTwo">
             At The Falcon Lab, We strive to intimately understand your brand so
@@ -136,10 +148,10 @@ const styles = {
 
     '.textOne, .textTwo': {
       color: 'white',
-      span: {
-        fontFamily: 'have_heart_oneregular',
-        color: 'primary',
-      },
+      // span: {
+      //   fontFamily: 'have_heart_oneregular',
+      //   color: 'primary',
+      // },
     },
     '.textWrap': {
       position: 'absolute',
