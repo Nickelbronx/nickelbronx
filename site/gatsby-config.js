@@ -69,7 +69,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['gobold_boldregular, have_heart_oneregular'],
+          families: ['Apex, Have Heart One'],
           urls: ['/fonts/fonts.css'],
         },
       },

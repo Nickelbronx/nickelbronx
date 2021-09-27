@@ -1,5 +1,5 @@
 const config = {
-  wordPressUrl: 'https://falcon.gatsby-wp.com/',
+  wordPressUrl: 'https://nbstaging2021.wpengine.com/',
   // wordPressUrl: 'http://falcon.wst/',
 
   // uploadsPath: 'wp-content/uploads',

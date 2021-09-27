@@ -1,10 +1,20 @@
+
 @font-face {
-  font-family: 'gobold';
-  src: url('gobold_bold-webfont.woff2') format('woff2'),
-    url('gobold_bold-webfont.woff') format('woff');
+  font-family: 'Apex';
+  src: url('ApexMk3-Medium.woff2') format('woff2'),
+      url('ApexMk3-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Have Heart One';
+  src: url('HaveHeartOne.woff2') format('woff2'),
+      url('HaveHeartOne.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
+  font-display: swap;
 
 @font-face {
   font-family: 'proxima_novalight';
