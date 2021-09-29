@@ -64,7 +64,7 @@ const Parallax = (props) => {
         backgroundColor="black"
         sx={{ minHeight: '100vh', bg: 'black' }}
       >
-        <Flex className="overlay">
+        <div className="flex  overlay">
           <Container
             className="textWrap"
             sx={{
@@ -72,26 +72,29 @@ const Parallax = (props) => {
               px: '30px !important',
             }}
           >
-            <h1
-              className="textOne"
-              sx={{
-                float: ['none', 'none', 'none', 'left'],
-                textAlign: 'center',
-                mr: 25,
-                mb: 0,
-                opacity: 0,
-                visibility: 'hidden',
-              }}
-            >
-              we give{' '}
-            </h1>
-            <div className="letters">
-              <Words />
+            <div className="flex">
+              <h1
+                className="text-white textOne"
+                sx={{
+                  float: ['none', 'none', 'none', 'left'],
+                  textAlign: 'center',
+                  mr: 25,
+                  mb: 0,
+                  opacity: 0,
+                  visibility: 'hidden',
+                }}
+              >
+                we give{' '}
+              </h1>
+              <div className="letters">
+                <Words />
+              </div>
             </div>
-            <h1 className="textOne !block">
+            <h1 className="text-white textOne">
               an unfair{' '}
               <span
                 className="!text-black"
+                style={{ color: 'black' }}
                 sx={{
                   WebkitTextStrokeWidth: '1px',
                   WebkitTextStrokeColor: 'white',
@@ -105,7 +108,7 @@ const Parallax = (props) => {
             At The Falcon Lab, We strive to intimately understand your brand so
             we are able to fluidly execute your vision.
           </h2>
-        </Flex>
+        </div>
         <Flex
           sx={{
             height: '100vh',
@@ -147,17 +150,17 @@ const styles = {
     color: 'white',
 
     '.textOne, .textTwo': {
-      color: 'white',
+      // color: 'white',
       // span: {
       //   fontFamily: 'have_heart_oneregular',
       //   color: 'primary',
       // },
     },
-    '.textWrap': {
-      position: 'absolute',
-      top: '45%',
-      // transform: 'translateY(-50%)',
-    },
+    // '.textWrap': {
+    //   position: 'absolute',
+    //   top: '45%',
+    //   // transform: 'translateY(-50%)',
+    // },
     '.textOne': {
       fontSize: [30, 50, 70],
     },
