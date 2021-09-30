@@ -7,6 +7,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Words from './Words'
+// import clsx from 'clsx'
 
 import { FormDown } from 'grommet-icons'
 
@@ -64,13 +65,13 @@ const Parallax = (props) => {
         backgroundColor="black"
         sx={{ minHeight: '100vh', bg: 'black' }}
       >
-        <div className="flex  overlay">
+        <div className="flex overlay">
           <Container
-            className="textWrap"
-            sx={{
-              position: 'relative',
-              px: '30px !important',
-            }}
+            className="textWrap absolute top-[45%] !px-8"
+            // sx={{
+            //   position: 'relative',
+            //   px: '30px !important',
+            // }}
           >
             <div className="flex">
               <h1
@@ -104,10 +105,27 @@ const Parallax = (props) => {
               </span>
             </h1>
           </Container>
-          <h2 className="textTwo">
-            At The Falcon Lab, We strive to intimately understand your brand so
-            we are able to fluidly execute your vision.
-          </h2>
+
+          <div className="textTwo max-w-[700px] px-50 sm:px-0 relative">
+            <h3 className="capitalize text-7xl font-script text-primary">
+              Our Mission
+            </h3>
+            <div className="text-xl leading-relaxed text-white">
+              You can't just buy a great brand, but we can build one for you.
+              When it comes to identity, looks more than skin deep.Analytics,
+              Traffic, SEO and SEM are critical components to bring people to
+              you - but what makes them stay?
+            </div>
+            <div className="inline-block p-2 my-5 text-2xl text-black uppercase bg-primary font-heading">
+              If you don't care about your aesthetic,
+              <div>we're probably not the agency for you</div>
+            </div>
+            <div className="text-xl leading-relaxed text-white">
+              if you want to build a magnetic brand that resonates and attracts
+              the RIGHT clients, across all mediums and chanels, then maybe we
+              are.
+            </div>
+          </div>
         </div>
         <Flex
           sx={{
@@ -165,11 +183,11 @@ const styles = {
       fontSize: [30, 50, 70],
     },
     '.textTwo': {
-      maxWidth: 550,
+      // maxWidth: 800,
       px: [50, 0],
-      lineHeight: 1.3,
-      fontSize: [25, 30, 45],
-      position: 'relative',
+      // lineHeight: 1.3,
+      // fontSize: [25, 30, 45],
+      // position: 'relative',
       top: 200,
       opacity: 0,
       visibility: 'hidden',
