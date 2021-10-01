@@ -4,11 +4,17 @@ import SocialFollow from '../social/SocialFollows'
 import ContactInfo from '../ContactInfo'
 import Menu from '../header/Menu'
 import { FeaturedPosts } from '../widgets'
+import footerLogo from '../../images/logo-footer.png'
 
 const Footer = () => {
   return (
-    <footer sx={{ ...styles }}>
-      <Container className="footerContainer">
+    <footer className="pb-5 bg-black pt-9">
+      {/* <Container className="footerContainer">
+        <div>
+          <div className="flex">
+            <img src="../../images/logo-footer.png" alt="footer logo" />
+          </div>
+        </div>
         <Box>
           <div>
             <h3>Contact</h3>
@@ -37,7 +43,20 @@ const Footer = () => {
             <Menu menuName="footer" sx={{ ...footerMenuStyles }} />
           </div>
         </Box>
-      </Container>
+      </Container> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 max-w-[1100px] md:px-5 mx-auto">
+        <div className="">
+          <img src={footerLogo} alt="logo" />
+        </div>
+
+        <div className="">
+          <h3 className="footer-title">Contact</h3>
+          <ContactInfo className="mb-10" />
+          <h3 className="footer-title">follow</h3>
+        </div>
+        <div className=" bg-gray-500 h-[300px]"></div>
+        <div className=" bg-gray-500 h-[300px]"></div>
+      </div>
     </footer>
   )
 }

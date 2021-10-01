@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Box } from 'theme-ui'
+import { jsx, Flex } from 'theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { LocationIcon, PhoneIcon, MailIcon } from './Icons'
@@ -24,26 +24,30 @@ export default (props) => {
   return (
     <div sx={{ ...styles }} {...props}>
       <Flex className="contactItem">
-        <PhoneIcon />
+        <PhoneIcon className="text-xl text-white" />
         <a href={`tel:${phone}`}>{phone}</a>
       </Flex>
       <Flex className="contactItem">
-        <MailIcon sx={{ mt: 3 }} />
+        <MailIcon />
         <a href={`mailto:${mail}`}>{mail}</a>
       </Flex>
-      <Flex className="contactItem">
+      {/* <Flex className="contactItem">
         <LocationIcon />
         <Box dangerouslySetInnerHTML={{ __html: address }} />
-      </Flex>
+      </Flex> */}
     </div>
   )
 }
 
 const styles = {
   '.contactItem': {
-    mb: 30,
+    mb: 20,
+    a: {
+      color: 'white',
+    },
     svg: {
       mr: 15,
+      color: 'white',
     },
     lineHeight: 1.2,
   },

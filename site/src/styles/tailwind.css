@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .footer-title {
+    @apply text-white uppercase;
+  }
+}
