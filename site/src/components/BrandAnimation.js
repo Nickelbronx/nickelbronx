@@ -167,7 +167,7 @@ const BrandAnimation = () => {
             width="440"
             height="207"
           />
-          <Link to="/service/visualIdentity">
+          <Link to="/service/brand-identity">
             <image
               id="visualIdentityImg"
               className="img"
@@ -189,7 +189,7 @@ const BrandAnimation = () => {
               height="270"
             />
           </Link>
-          <Link to="/service/content">
+          <Link to="/service/content-development">
             <image
               id="contentImg"
               className="img"
@@ -200,7 +200,7 @@ const BrandAnimation = () => {
               height="210"
             />
           </Link>
-          <Link to="/service/social">
+          <Link to="/service/social-assets">
             <image
               id="socialImg"
               className="img"
@@ -211,7 +211,7 @@ const BrandAnimation = () => {
               height="197"
             />
           </Link>
-          <Link to="/service/seo-dev">
+          <Link to="/service/sem">
             <image
               id="seoImg"
               className="img"
@@ -222,7 +222,7 @@ const BrandAnimation = () => {
               height="205"
             />
           </Link>
-          <Link to="/service/web">
+          <Link to="/service/web-dev">
             <image
               id="webImg"
               className="img"
@@ -233,7 +233,7 @@ const BrandAnimation = () => {
               height="325"
             />
           </Link>
-          <Link to="/service/design">
+          <Link to="/service/lead-generation">
             <image
               id="leadImg"
               className="img"
