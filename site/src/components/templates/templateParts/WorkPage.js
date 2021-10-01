@@ -155,5 +155,6 @@ const filtersStyles = {
   justifyContent: ['flex-start', 'flex-start', 'space-between'],
   '.filter': {
     pr: [20, 20, 0],
+    color: 'black',
   },
 }
