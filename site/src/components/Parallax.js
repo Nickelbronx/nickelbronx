@@ -107,7 +107,7 @@ const Parallax = (props) => {
           </Container>
 
           <div className="textTwo max-w-[700px] px-50 sm:px-0 relative">
-            <h3 className="capitalize text-7xl font-script text-primary">
+            <h3 className="-mb-2 capitalize text-7xl font-script text-primary">
               Our Mission
             </h3>
             <div className="text-xl leading-relaxed text-white">
