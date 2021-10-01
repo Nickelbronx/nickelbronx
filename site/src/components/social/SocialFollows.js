@@ -85,7 +85,7 @@ const SocialFollows = ({ ...props }) => {
   const { social } = useSiteMetadata()
 
   return (
-    <Box className="widget widget-socialFollow" {...props}>
+    <div className="flex space-x-3 widget widget-socialFollow" {...props}>
       {social &&
         social.map(({ name, url }) => {
           const index = supportedIcons.indexOf(name.toLowerCase())
@@ -98,15 +98,16 @@ const SocialFollows = ({ ...props }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Follow on ${name}`}
+                className="text-white"
               >
-                {<Component />}
+                {<Component className="text-white" />}
               </a>
             )
           } else {
             return null
           }
         })}
-    </Box>
+    </div>
   )
 }
 

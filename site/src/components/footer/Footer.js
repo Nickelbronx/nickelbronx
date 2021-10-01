@@ -8,54 +8,38 @@ import footerLogo from '../../images/logo-footer.png'
 
 const Footer = () => {
   return (
-    <footer className="pb-5 bg-black pt-9">
-      {/* <Container className="footerContainer">
-        <div>
-          <div className="flex">
-            <img src="../../images/logo-footer.png" alt="footer logo" />
+    <footer className="pt-10 pb-8 bg-black">
+      <div className="container mx-auto px-7 ">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
+          <div className="flex justify-center">
+            <div>
+              <img src={footerLogo} alt="logo" className="max-w-[150px]" />
+            </div>
           </div>
-        </div>
-        <Box>
-          <div>
-            <h3>Contact</h3>
-            <ContactInfo />
-
-            <Box className="social" sx={{ fontWeight: 'bold' }}>
-              Follow us on
-              <Box className="socialItems" sx={{ ...socialStyles }}>
-                <SocialFollow />
-              </Box>
-            </Box>
+          <div className="">
+            <h3 className="footer-title">Contact</h3>
+            <ContactInfo className="mb-10" />
+            <h3 className="footer-title">follow</h3>
+            <SocialFollow />
           </div>
-        </Box>
-        <Box>
-          <div>
-            <h3>News</h3>
-            <FeaturedPosts
-              location="footer"
-              sx={{ a: { display: 'inline-block', mb: 10.8 } }}
+          <div className="">
+            <h3 className="footer-title">News</h3>
+          </div>
+          <div className="">
+            <h3 className="footer-title">Services</h3>
+            <h4 className="footer-subtitle">Design</h4>
+            <Menu
+              menuName="design"
+              sx={{ ...footerMenuStyles }}
+              className="mb-5"
             />
+            <h4 className="footer-subtitle">Marketing</h4>
+            <Menu menuName="marketing" sx={{ ...footerMenuStyles }} />
           </div>
-        </Box>
-        <Box>
-          <div>
-            <h3>Services</h3>
-            <Menu menuName="footer" sx={{ ...footerMenuStyles }} />
-          </div>
-        </Box>
-      </Container> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 max-w-[1100px] md:px-5 mx-auto">
-        <div className="">
-          <img src={footerLogo} alt="logo" />
         </div>
-
-        <div className="">
-          <h3 className="footer-title">Contact</h3>
-          <ContactInfo className="mb-10" />
-          <h3 className="footer-title">follow</h3>
+        <div className="flex justify-end mt-5 text-sm text-white">
+          Nickel Bronx, Copyright {new Date().getFullYear()}
         </div>
-        <div className=" bg-gray-500 h-[300px]"></div>
-        <div className=" bg-gray-500 h-[300px]"></div>
       </div>
     </footer>
   )
@@ -129,6 +113,14 @@ const footerMenuStyles = {
   },
   '.menu-item': {
     listStyleType: 'none',
+    fontSize: 16,
+    mb: 4,
+    a: {
+      color: 'white',
+      '&:hover': {
+        color: 'primary',
+      },
+    },
   },
 }
 

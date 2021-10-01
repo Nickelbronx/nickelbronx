@@ -6,4 +6,7 @@
   .footer-title {
     @apply text-white uppercase;
   }
+  .footer-subtitle {
+    @apply mb-3 uppercase text-primary;
+  }
 }

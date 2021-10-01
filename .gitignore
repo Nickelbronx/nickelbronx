@@ -72,7 +72,7 @@ yarn-error.log
 .netlify/
 
 #vscode
-snipsnap.code-snippets/
+snipsnap.code-snippets
 
 #bit
 .bitmap

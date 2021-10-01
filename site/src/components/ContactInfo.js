@@ -28,7 +28,7 @@ export default (props) => {
         <a href={`tel:${phone}`}>{phone}</a>
       </Flex>
       <Flex className="contactItem">
-        <MailIcon />
+        <MailIcon className="text-xl text-white" />
         <a href={`mailto:${mail}`}>{mail}</a>
       </Flex>
       {/* <Flex className="contactItem">
@@ -44,6 +44,7 @@ const styles = {
     mb: 20,
     a: {
       color: 'white',
+      fontSize: 16,
     },
     svg: {
       mr: 15,
