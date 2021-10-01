@@ -1,7 +1,15 @@
 export default {
+  '.col-1': {
+    '.spacer': {
+      width: '50%',
+      height: '4px',
+      bg: 'primary',
+      mt: '40px',
+    },
+  },
   '.columnItem': {
     display: 'flex',
-    alignItems: 'center',
+    // alignItems: 'center',
     '>div': {
       p: 0,
     },

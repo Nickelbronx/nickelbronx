@@ -62,6 +62,9 @@ const styles = {
   '&.subtitle,&.content': {
     '.container': {
       maxWidth: 'm',
+      // '&:about-content': {
+      //   maxWidth: '800px',
+      // },
     },
   },
   '&.subtitle': {

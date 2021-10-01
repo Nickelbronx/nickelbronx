@@ -93,11 +93,7 @@ export const ColumnsBlock = ({
           </Box>
         )}
         {columns.length > 0 && (
-          <Grid
-            className="colsWrap"
-            gap={columnsGap}
-            columns={[1, 2, number(columnsNumber)]}
-          >
+          <div className="grid-cols-2 gap-20 colsWrap md:grid">
             {columns.map((col, i) => {
               const {
                 columnVerticalPadding,
@@ -171,7 +167,7 @@ export const ColumnsBlock = ({
                 </Box>
               )
             })}
-          </Grid>
+          </div>
         )}
       </Container>
     </Box>
