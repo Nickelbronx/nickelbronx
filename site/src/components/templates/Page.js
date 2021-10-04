@@ -73,8 +73,8 @@ const Page = ({ page }) => {
               return <ColumnsBlock {...block} />
             case 'WpPage_Flexlayouts_FlexibleLayouts_SpacerBlock':
               return <SpacerBlock {...block} />
-            case 'WpPage_Flexlayouts_FlexibleLayouts_TeamBlock':
-              return <TeamBlock {...block} />
+            // case 'WpPage_Flexlayouts_FlexibleLayouts_TeamBlock':
+            //   return <TeamBlock {...block} />
             case 'WpPage_Flexlayouts_FlexibleLayouts_TestimonialsBlock':
               return <TestimonialsBlock {...block} />
             case 'WpPage_Flexlayouts_FlexibleLayouts_LogosBlock':
