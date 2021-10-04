@@ -44,6 +44,7 @@ module.exports = {
     'gatsby-plugin-theme-ui',
     'gatsby-plugin-sass',
     'gatsby-plugin-postcss',
+    // `gatsby-plugin-gatsby-cloud`,
 
     {
       resolve: 'gatsby-plugin-wpcf7',
