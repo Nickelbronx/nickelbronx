@@ -59,7 +59,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    'gatsby-plugin-wordpress-fancybox',
+
     // {
     //   resolve: 'gatsby-plugin-mailchimp',
     //   options: {
