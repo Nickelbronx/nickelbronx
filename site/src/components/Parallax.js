@@ -91,10 +91,10 @@ const Parallax = (props) => {
                 <Words />
               </div>
             </div>
-            <h1 className="text-white textOne">
+            <h1 className="relative mt-0 text-white -top-5 textOne">
               an unfair{' '}
               <span
-                className="!text-black"
+                className="!text-black "
                 style={{ color: 'black' }}
                 sx={{
                   WebkitTextStrokeWidth: '1px',
@@ -110,7 +110,7 @@ const Parallax = (props) => {
             <h3 className="-mb-2 capitalize text-7xl font-script text-primary">
               Our Mission
             </h3>
-            <div className="text-xl leading-relaxed text-white">
+            <div className="text-lg leading-relaxed text-white">
               You can't just buy a great brand, but we can build one for you.
               When it comes to identity, looks more than skin deep.Analytics,
               Traffic, SEO and SEM are critical components to bring people to
@@ -120,7 +120,7 @@ const Parallax = (props) => {
               If you don't care about your aesthetic,
               <div>we're probably not the agency for you</div>
             </div>
-            <div className="text-xl leading-relaxed text-white">
+            <div className="text-lg leading-relaxed text-white">
               if you want to build a magnetic brand that resonates and attracts
               the RIGHT clients, across all mediums and chanels, then maybe we
               are.
@@ -196,7 +196,12 @@ const styles = {
       position: 'relative',
       top: [0, 0, 0, 0],
       //ml: 25,
-      svg: { visibility: 'hidden',width: [200, 300, 450], cursor: 'pointer', fill: "#d83e00" }
+      svg: {
+        visibility: 'hidden',
+        width: [200, 300, 450],
+        cursor: 'pointer',
+        fill: '#d83e00',
+      },
     },
   },
 }
