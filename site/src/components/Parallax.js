@@ -194,30 +194,9 @@ const styles = {
     },
     '.letters': {
       position: 'relative',
-      top: [-50, 0, 0, -30],
-      ml: 25,
-      // svg: { float: 'left', maxWidth: ['100%'] },
-
-      '.design-lab,.print-lab,.marketing-lab,.promo-lab,.web-dev-lab,.apparel-lab,.experiential-lab': {
-        cursor: 'pointer',
-        fill: '#d83e00',
-        position: 'absolute',
-        top: [50, 0],
-        visibility: 'hidden',
-        opacity: 0,
-        left: [-40, 100, 200, 370],
-        height: [80, 100, 160],
-      },
-      '.design-lab .mask, .print-lab .mask, .marketing-lab .mask, .promo-lab .mask, .web-dev-lab .mask, .apparel-lab .mask, .experiential-lab .mask': {
-        fill: 'none',
-        stroke: '#fff',
-        strokeMiterlimit: 10,
-      },
-
-      '.print-lab': {
-        // height: 160,
-        top: [50, 15],
-      },
+      top: [0, 0, 0, 0],
+      //ml: 25,
+      svg: { visibility: 'hidden',width: [200, 300, 450], cursor: 'pointer', fill: "#d83e00" }
     },
   },
 }

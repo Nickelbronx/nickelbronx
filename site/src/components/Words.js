@@ -4,15 +4,7 @@ import { useEffect, Fragment } from 'react'
 import { gsap, Linear } from 'gsap'
 
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin'
-import {
-  DesignLab,
-  PrintLab,
-  MarketingLab,
-  WebDevLab,
-  PromoLab,
-  AppLab,
-  ExpLab,
-} from './animatedWords'
+import {AnimatedWords} from './animatedWords'
 
 const Words = (props) => {
   useEffect(() => {
@@ -22,666 +14,204 @@ const Words = (props) => {
     }
     gsap.set(
       [
-        '.design-lab',
-        '.print-lab',
-        '.marketing-lab',
-        '.promo-lab',
-        '.web-dev-lab',
-        '.apparel-lab',
-        '.experiential-lab',
+        "#Brands_Lab",
+      "#Websites_Lab",
+      "#Marketing_Lab",
+      "#Strategy_Lab",
+      "#Lead_Gen_Lab",
+      "#Demand_gen_Lab",
+      "#Content_Lab",
+      "#Messaging_Lab",
+      "#Social_Lab",
+      "#Ads_Lab"
       ],
       { autoAlpha: 0 }
     )
+    
+    const gen = ["#m-gen-G", "#m-gen-e", "#m-gen-n"];
+    function genTl() {
+      let gen_tl = gsap.timeline();
+      gen_tl
+        .fromTo("#m-gen-G", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+        .fromTo("#m-gen-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+        .fromTo("#m-gen-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+      return gen_tl;
+    }
+    let brands_tl = gsap.timeline({ paused: true });
+brands_tl
+  .fromTo("#m-Brands-B-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-B-circle", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-r", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-d", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Brands-s", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
 
-    function designAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.design-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.design-lab #mask-d-line',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.design-lab #mask-d-round',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.design-lab #mask-e',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.design-lab #mask-s',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.design-lab #mask-i',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true, duration: 0.2 }
-        )
-        .fromTo(
-          '.design-lab #mask-i-dot',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true, duration: 0.2 }
-        )
-        .fromTo(
-          '.design-lab #mask-g',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.design-lab #mask-n',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo('.design-lab #mask-l', { drawSVG: '0% 0%' }, { drawSVG: true })
-        .fromTo('.design-lab #mask-a', { drawSVG: '0% 0%' }, { drawSVG: true })
-        .fromTo('.design-lab #mask-b', { drawSVG: '0% 0%' }, { drawSVG: true })
-        .to('.design-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
+let websites_tl = gsap.timeline({ paused: true });
+websites_tl
+  .fromTo("#m-Websites-W", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-e-1", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-b", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-s-1", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-i", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-t-vLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-t-hLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-e-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Websites-s-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
 
-    function printAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.print-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.print-lab #mask-p-line',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #mask-p-circle',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #mask-r',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #mask-i-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true },
-          '-=0.05'
-        )
-        .fromTo(
-          '.print-lab #mask-n',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true },
-          '-=0.05'
-        )
-        .fromTo(
-          '.print-lab #mask-t-line-ver',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true },
-          '-=0.05'
-        )
-        .fromTo(
-          '.print-lab #mask-i-dot',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #mask-t-line-hor',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #print-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #print-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.print-lab #print-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.print-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
-    function marketingAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.marketing-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.marketing-lab #mask-M',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-a',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-r',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-k-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-k-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-e',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-t-line-v',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-t-line-h',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-i-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-i-dot',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-n',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-g',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.marketing-lab #mask-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.marketing-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
-    function promoAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.promo-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.promo-lab #mask-p-line',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-p-circle',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-r',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-o-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-m',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-o-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.promo-lab #mask-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.promo-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
-    function webDevAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.web-dev-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.web-dev-lab #mask-W',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-e-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-b',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #and',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-d-line',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-d-round',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-e-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-v',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.web-dev-lab #mask-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.web-dev-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
-    function apparelAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.apparel-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.apparel-lab #mask-A',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-p-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-p-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-a-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-r',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-e',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-l',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.apparel-lab #mask-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.apparel-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
-    function experiantialAnimation() {
-      let tl = gsap.timeline({
-        defaults: { duration: 0.18, ease: Linear.easeNone },
-      })
-      tl.to('.experiential-lab', { autoAlpha: 1 })
-        .fromTo(
-          '.experiential-lab #mask-E-top',
-          {
-            drawSVG: '0% 0%',
-          },
-          { duration: 0.2, drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-E-bottom',
-          {
-            drawSVG: '0% 0%',
-          },
-          { duration: 0.2, drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-E-center',
-          {
-            drawSVG: '0% 0%',
-          },
-          { duration: 0.2, drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-x-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { duration: 0.2, drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-x-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { duration: 0.2, drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-p',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-e-1',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-r',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-i-1-v',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-i-1-dot',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-e-2',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-n',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-t-v',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-t-h',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-i-2-v',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-i-2-dot',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-a',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-l',
-          {
-            drawSVG: '0% 0%',
-          },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-lab-l',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-lab-a',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .fromTo(
-          '.experiential-lab #mask-lab-b',
-          { drawSVG: '0% 0%' },
-          { drawSVG: true }
-        )
-        .to('.experiential-lab', { autoAlpha: 0 }, '+=0.18')
-      return tl
-    }
+let marketing_tl = gsap.timeline({ paused: true });
+marketing_tl
+  .fromTo("#m-marketing-M", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-r", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-k-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-k-cross", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-t", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+
+  .fromTo("#m-marketing-i-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-i-dot", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-marketing-g", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let strategy_tl = gsap.timeline({ paused: true });
+strategy_tl
+  .fromTo("#m-strategy-S", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-t", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-r", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-t-2-vLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-t-2-hLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-g", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-strategy-y", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let lead_gen_tl = gsap.timeline({ paused: true });
+lead_gen_tl
+  .fromTo("#m-Lead-L", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Lead-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Lead-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-Lead-d", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let demand_gen_tl = gsap.timeline({ paused: true });
+demand_gen_tl
+  .fromTo("#m-demand-D-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-D-circle", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-m", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-demand-d-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let content_tl = gsap.timeline({ paused: true });
+content_tl
+  .fromTo("#m-content-C", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-o", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-t-1-vLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-t-1-hLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-n-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-t-2-vLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-content-t-2-hLine", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let messaging_tl = gsap.timeline({ paused: true });
+messaging_tl
+  .fromTo("#m-messaging-M", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-e", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-s-1", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-s-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-g-1", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-i-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-i-dot", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-n", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-messaging-g-2", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let social_tl = gsap.timeline({ paused: true });
+social_tl
+  .fromTo("#m-social-S", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-o", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-c", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-i-line", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-i-dot", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-a", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-social-l", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+
+let ads_tl = gsap.timeline({ paused: true });
+ads_tl
+  .fromTo("#m-ads-A", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-ads-d", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" })
+  .fromTo("#m-ads-s", { drawSVG: "0% 0%" }, { drawSVG: "0% 100%" });
+    
 
     let master = gsap.timeline({
+      paused: true,
       onComplete: function () {
         this.restart()
       },
     })
     master
-      .add(designAnimation())
-      .add(printAnimation(), '+=0.7')
-      .add(marketingAnimation(), '+=0.7')
-      .add(promoAnimation(), '+=0.7')
-      .add(webDevAnimation(), '+=0.7')
-      .add(apparelAnimation(), '+=0.7')
-      .add(experiantialAnimation(), '+=0.7')
-    master.play()
+    .to('svg', {visibility: 'visible', duration: 0.1})
+    .to("#Brands_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(brands_tl.play())
+    .to("#Brands_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to(["#Websites_Lab"], { autoAlpha: 1, duration: 0.1 })
+    .add(websites_tl.play())
+
+    .to("#Websites_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to("#Marketing_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(marketing_tl.play())
+
+    .to("#Marketing_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to("#Strategy_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(strategy_tl.play())
+
+    .to("#Strategy_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to("#Lead_Gen_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(lead_gen_tl.play())
+    .add(genTl())
+
+    .to("#Lead_Gen_Lab", { autoAlpha: 0, duration: 0.1 })
+    .set(gen, { drawSVG: "0% 0%" })
+
+    .to("#Demand_gen_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(demand_gen_tl.play())
+    .add(genTl())
+
+    .to("#Demand_gen_Lab", { autoAlpha: 0, duration: 0.1 })
+    .set(gen, { drawSVG: "0% 0%" })
+
+    .to("#Content_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(content_tl.play())
+
+    .to("#Content_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to("#Messaging_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(messaging_tl.play())
+
+    .to("#Messaging_Lab", { autoAlpha: 0, duration: 0.1 })
+
+    .to("#Social_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(social_tl.play())
+
+    .to("#Social_Lab", { autoAlpha: 0, duration: 0.1 })
+    
+    .to("#Ads_Lab", { autoAlpha: 1, duration: 0.1 })
+    .add(ads_tl.play())
+
+    .to("#Ads_Lab", { autoAlpha: 0, duration: 0.1 });
+    master.timeScale(2.5).play()
   }, [])
 
   return (
-    <Fragment>
-      <DesignLab />
-      <PrintLab />
-      <MarketingLab />
-      <PromoLab />
-      <WebDevLab />
-      <AppLab />
-      <ExpLab />
-    </Fragment>
+    <div>
+      <AnimatedWords />
+    </div>
   )
 }
 
