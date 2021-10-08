@@ -196,7 +196,7 @@ const styles = {
       position: 'relative',
       top: [0, 0, 0, 0],
       //ml: 25,
-      svg: { width: [200, 300, 450], cursor: 'pointer', fill: "#d83e00" }
+      svg: { visibility: 'hidden',width: [200, 300, 450], cursor: 'pointer', fill: "#d83e00" }
     },
   },
 }

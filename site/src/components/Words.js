@@ -152,6 +152,7 @@ ads_tl
       },
     })
     master
+    .to('svg', {visibility: 'visible', duration: 0.1})
     .to("#Brands_Lab", { autoAlpha: 1, duration: 0.1 })
     .add(brands_tl.play())
     .to("#Brands_Lab", { autoAlpha: 0, duration: 0.1 })
