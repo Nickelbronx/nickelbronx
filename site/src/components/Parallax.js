@@ -94,8 +94,7 @@ const Parallax = (props) => {
             <h1 className="relative mt-0 text-white -top-5 textOne">
               an unfair{' '}
               <span
-                className="!text-black "
-                style={{ color: 'black' }}
+                className="!text-transparent "
                 sx={{
                   WebkitTextStrokeWidth: '1px',
                   WebkitTextStrokeColor: 'white',
@@ -107,20 +106,20 @@ const Parallax = (props) => {
           </Container>
 
           <div className="textTwo max-w-[700px] px-50 sm:px-0 relative">
-            <h3 className="-mb-2 capitalize text-7xl font-script text-primary">
+            <h3 className="capitalize text-7xl md:text-8xl font-script text-primary">
               Our Mission
             </h3>
-            <div className="text-lg leading-relaxed text-white">
+            <div className="text-lg leading-relaxed text-white md:text-2xl">
               You can't just buy a great brand, but we can build one for you.
               When it comes to identity, looks more than skin deep.Analytics,
               Traffic, SEO and SEM are critical components to bring people to
               you - but what makes them stay?
             </div>
-            <div className="inline-block p-2 my-5 text-2xl text-black uppercase bg-primary font-heading">
+            <div className="inline-block p-2 my-6 text-xl text-black uppercase sm:text-2xl md:text-4xl bg-primary font-heading">
               If you don't care about your aesthetic,
               <div>we're probably not the agency for you</div>
             </div>
-            <div className="text-lg leading-relaxed text-white">
+            <div className="text-lg leading-relaxed text-white md:text-2xl">
               if you want to build a magnetic brand that resonates and attracts
               the RIGHT clients, across all mediums and chanels, then maybe we
               are.
@@ -180,7 +179,8 @@ const styles = {
     //   // transform: 'translateY(-50%)',
     // },
     '.textOne': {
-      fontSize: [30, 50, 70],
+      fontSize: [25, 50, 80, 110],
+      lineHeight: [2.3, 1.3],
     },
     '.textTwo': {
       // maxWidth: 800,
@@ -194,11 +194,11 @@ const styles = {
     },
     '.letters': {
       position: 'relative',
-      top: [0, 0, 0, 0],
-      //ml: 25,
+      top: [10, 0],
+      left: [-10, 0],
       svg: {
         visibility: 'hidden',
-        width: [200, 300, 450],
+        width: [190, 300, 450, 600],
         cursor: 'pointer',
         fill: '#d83e00',
       },
