@@ -49,7 +49,7 @@ export const TestimonialsBlock = ({
     infinite: true,
     autoplay: true,
     fade: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 6000,
     speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
