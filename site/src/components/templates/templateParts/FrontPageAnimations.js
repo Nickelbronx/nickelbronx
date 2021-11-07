@@ -3,12 +3,12 @@ import { jsx, Box, Flex } from 'theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
 import Parallax from '../../Parallax'
 import BrandAnimation from '../../BrandAnimation'
-import Img from 'gatsby-image'
+import servicesMobile from '../../../images/services-mobile.svg'
 
 export const FrontPageAnimations = ({ page, ...props }) => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "brandMobile2.png" }) {
+      file(relativePath: { eq: "services-mobile.svg" }) {
         childImageSharp {
           fixed(width: 375) {
             ...GatsbyImageSharpFixed_noBase64
@@ -24,10 +24,10 @@ export const FrontPageAnimations = ({ page, ...props }) => {
         <BrandAnimation />
       </div>
       <Flex
-        className="mobileImage"
+        className="px-5 mobileImage"
         sx={{ bg: 'black', justifyContent: 'center' }}
       >
-        <Img fixed={data.file.childImageSharp.fixed} />
+        <img src={servicesMobile} alt="services" />
       </Flex>
     </Box>
   )
