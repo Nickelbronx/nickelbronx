@@ -1,9 +1,13 @@
 /** @jsx jsx */
-import { jsx, Flex } from 'theme-ui'
+import { jsx } from 'theme-ui'
 import { Link } from 'gatsby'
-import logo from '../../images/logo-header.png'
+import logoWhite from '../../images/logo-header-white.svg'
+import logoBlack from '../../images/logo-header-black.svg'
+import { window } from 'browser-monads'
 
 const SiteBranding = ({ title, ...props }) => {
+  const path = window.location.pathname
+  const logo = path === '/' || path.includes('contact') ? logoWhite : logoBlack
   return (
     <Link as="Link" to="/" rel="home">
       <div {...props}>
