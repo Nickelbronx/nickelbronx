@@ -3,10 +3,25 @@ import { Container, jsx, Box } from 'theme-ui'
 import SocialFollow from '../social/SocialFollows'
 import ContactInfo from '../ContactInfo'
 import Menu from '../header/Menu'
-import { FeaturedPosts } from '../widgets'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import footerLogo from '../../images/logo-footer.png'
 
+const LAST_POSTS = graphql`
+  query {
+    allWpPost(limit: 4) {
+      nodes {
+        id
+        title
+        uri
+      }
+    }
+  }
+`
+
 const Footer = () => {
+  const data = useStaticQuery(LAST_POSTS)
+  const { nodes: posts } = data.allWpPost
+
   return (
     <footer className="pt-10 pb-8 bg-black">
       <div className="container mx-auto px-7 ">
@@ -24,6 +39,15 @@ const Footer = () => {
           </div>
           <div className="">
             <h3 className="footer-title">News</h3>
+            <ul role="menu" className="m-0">
+              {posts?.map((post) => (
+                <li key={post.id} className="m-1">
+                  <Link to={post.uri} className="text-base text-white">
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="">
             <h3 className="footer-title">Services</h3>
