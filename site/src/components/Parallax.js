@@ -91,7 +91,7 @@ const Parallax = (props) => {
                 <Words />
               </div>
             </div>
-            <h1 className="relative mt-0 text-white -top-5 textOne">
+            <h1 className="relative invisible mt-0 text-white opacity-0 -top-5 textOne">
               an unfair{' '}
               <span
                 className="!text-transparent "
