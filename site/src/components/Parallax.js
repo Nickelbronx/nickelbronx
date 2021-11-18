@@ -73,12 +73,12 @@ const Parallax = (props) => {
             //   px: '30px !important',
             // }}
           >
-            <div className="flex">
+            <div className="sm:flex">
               <h1
                 className="text-white textOne"
                 sx={{
                   float: ['none', 'none', 'none', 'left'],
-                  textAlign: 'center',
+                  textAlign: ['left', 'center'],
                   mr: 25,
                   mb: 0,
                   opacity: 0,
@@ -179,8 +179,8 @@ const styles = {
     //   // transform: 'translateY(-50%)',
     // },
     '.textOne': {
-      fontSize: [25, 50, 80, 110],
-      lineHeight: [2.3, 1.3],
+      fontSize: [33, 50, 80, 110],
+      lineHeight: [1.3, 1.3],
     },
     '.textTwo': {
       // maxWidth: 800,
@@ -194,11 +194,11 @@ const styles = {
     },
     '.letters': {
       position: 'relative',
-      top: [10, 0],
+      top: [0, 0],
       left: [-10, 0],
       svg: {
         visibility: 'hidden',
-        width: [190, 300, 450, 600],
+        width: [350, 300, 450, 600],
         cursor: 'pointer',
         fill: '#d83e00',
       },
