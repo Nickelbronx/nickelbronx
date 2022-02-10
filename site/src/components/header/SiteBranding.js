@@ -7,7 +7,10 @@ import { window } from 'browser-monads'
 
 const SiteBranding = ({ title, ...props }) => {
   const path = window.location.pathname
-  const logo = path === '/' || path.includes('contact') ? logoWhite : logoBlack
+  const logo =
+    path === '/' || path.includes('contact') || path.includes('services')
+      ? logoWhite
+      : logoBlack
   return (
     <Link as="Link" to="/" rel="home">
       <div {...props}>
