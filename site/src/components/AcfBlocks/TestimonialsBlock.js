@@ -109,6 +109,9 @@ export const TestimonialsBlock = ({
 }
 
 const styles = {
+  '&.quotes': {
+    marginTop: -50,
+  },
   bg: 'lightGrey',
   pt: 70,
   pb: 50,

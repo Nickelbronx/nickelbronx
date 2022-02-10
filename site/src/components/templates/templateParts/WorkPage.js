@@ -68,7 +68,7 @@ export const WorkPage = ({ page, ...props }) => {
     <Fragment>
       <Container sx={{ ...styles }} {...props}>
         <ProjectHeader title="Our Work" sx={{ mb: 100 }} />
-        <Flex className="filters gsReveal" sx={{ ...filtersStyles }}>
+        {/* <Flex className="filters gsReveal" sx={{ ...filtersStyles }}>
           <Box className="filter" key="all">
             <Button
               variant="invisible"
@@ -88,7 +88,7 @@ export const WorkPage = ({ page, ...props }) => {
                 />
               </Box>
             ))}
-        </Flex>
+        </Flex> */}
       </Container>
       <Flex
         sx={{
