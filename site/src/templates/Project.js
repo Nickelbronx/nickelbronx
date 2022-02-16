@@ -34,7 +34,7 @@ const Project = ({ data }) => {
           sx={{ bg: 'lightGrey', justifyContent: 'center', py: 50, mt: 25 }}
         >
           <Img
-            fluid={topImage.localFile.childImageSharp.fluid}
+            fluid={topImage?.localFile?.childImageSharp?.fluid}
             sx={{ maxWidth: 900 }}
             className="gsReveal"
           />
