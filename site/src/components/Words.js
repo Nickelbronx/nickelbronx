@@ -218,56 +218,47 @@ const Words = (props) => {
       .to('svg', { visibility: 'visible', duration: 0.1 })
       .to('#Brands_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(brands_tl.play())
-      .to('#Brands_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Brands_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to(['#Websites_Lab'], { autoAlpha: 1, duration: 0.1 })
-      .add(websites_tl.play(), '=+3')
-
-      .to('#Websites_Lab', { autoAlpha: 0, duration: 0.1 })
+      .add(websites_tl.play())
+      .to('#Websites_Lab', { autoAlpha: 0, duration: 0.1 }, '+=3')
 
       .to('#Marketing_Lab', { autoAlpha: 1, duration: 0.1 })
-      .add(marketing_tl.play(), '=+3')
-
-      .to('#Marketing_Lab', { autoAlpha: 0, duration: 0.1 })
+      .add(marketing_tl.play())
+      .to('#Marketing_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to('#Strategy_Lab', { autoAlpha: 1, duration: 0.1 })
-      .add(strategy_tl.play(), '=+3')
-
-      .to('#Strategy_Lab', { autoAlpha: 0, duration: 0.1 })
+      .add(strategy_tl.play())
+      .to('#Strategy_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to('#Lead_Gen_Lab', { autoAlpha: 1, duration: 0.1 })
-      .add(lead_gen_tl.play(), '=+3')
+      .add(lead_gen_tl.play())
       .add(genTl())
-
-      .to('#Lead_Gen_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Lead_Gen_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
       .set(gen, { drawSVG: '0% 0%' })
 
       .to('#Demand_gen_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(demand_gen_tl.play(), '=+3')
       .add(genTl())
-
-      .to('#Demand_gen_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Demand_gen_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
       .set(gen, { drawSVG: '0% 0%' })
 
       .to('#Content_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(content_tl.play(), '=+3')
-
-      .to('#Content_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Content_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to('#Messaging_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(messaging_tl.play(), '=+3')
-
-      .to('#Messaging_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Messaging_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to('#Social_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(social_tl.play(), '=+3')
-
-      .to('#Social_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Social_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
 
       .to('#Ads_Lab', { autoAlpha: 1, duration: 0.1 })
       .add(ads_tl.play(), '=+3')
-
-      .to('#Ads_Lab', { autoAlpha: 0, duration: 0.1 })
+      .to('#Ads_Lab', { autoAlpha: 0, duration: 0.1 }, '=+3')
     master.timeScale(2.5).play()
   }, [])
 
