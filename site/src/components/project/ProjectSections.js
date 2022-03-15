@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Flex } from 'theme-ui'
 import { Fragment } from 'react'
-import Img from 'gatsby-image'
+import Img from '../images/image'
 
 export const ProjectSections = ({ items, ...props }) => (
   <Fragment>
@@ -44,10 +44,7 @@ export const ProjectSections = ({ items, ...props }) => (
                           key={i}
                           // sx={{ maxWidth: [600, 900, 420] }}
                         >
-                          <Img
-                            fluid={img?.localFile?.childImageSharp?.fluid}
-                            sx={{ width: widthStyle }}
-                          />
+                          <Img img={img} sx={{ width: widthStyle }} />
                         </div>
                       )
                     })}

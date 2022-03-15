@@ -5,7 +5,7 @@ import { ProjectHeader, ProjectSections } from '../components/project'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 import Layout from '../components/Layout'
-import Img from 'gatsby-image'
+import Img from '../components/images/image'
 
 const Project = ({ data }) => {
   const {
@@ -33,11 +33,7 @@ const Project = ({ data }) => {
           className="hero"
           sx={{ bg: 'lightGrey', justifyContent: 'center', py: 50, mt: 25 }}
         >
-          <Img
-            fluid={topImage?.localFile?.childImageSharp?.fluid}
-            sx={{ maxWidth: 900 }}
-            className="gsReveal"
-          />
+          <Img img={topImage} sx={{ maxWidth: 900 }} className="gsReveal" />
         </Flex>
       )}
 
@@ -56,6 +52,7 @@ export const pageQuery = graphql`
         projectType
         topImage {
           localFile {
+            publicURL
             childImageSharp {
               fluid(maxWidth: 900) {
                 ...GatsbyImageSharpFluid_tracedSVG
@@ -68,6 +65,7 @@ export const pageQuery = graphql`
           content
           images {
             localFile {
+              publicURL
               childImageSharp {
                 fluid(maxWidth: 900) {
                   ...GatsbyImageSharpFluid_tracedSVG
