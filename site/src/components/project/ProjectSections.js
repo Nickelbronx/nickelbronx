@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Flex } from 'theme-ui'
 import { Fragment } from 'react'
-import Img from '../images/image'
+import Img from '../images/Image'
 
 export const ProjectSections = ({ items, ...props }) => (
   <Fragment>

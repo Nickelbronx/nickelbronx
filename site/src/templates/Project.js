@@ -5,7 +5,7 @@ import { ProjectHeader, ProjectSections } from '../components/project'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 import Layout from '../components/Layout'
-import Img from '../components/images/image'
+import Img from '../components/images/Image'
 
 const Project = ({ data }) => {
   const {
