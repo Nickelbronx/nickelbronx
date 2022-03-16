@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex } from 'theme-ui'
+import { jsx, Flex, Box } from 'theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { LocationIcon, PhoneIcon, MailIcon } from './Icons'
