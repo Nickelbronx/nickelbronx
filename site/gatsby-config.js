@@ -7,28 +7,29 @@ module.exports = {
     description: 'Gatsby starter site for Gatsby Theme Wordpress Theme.',
     author: '@alexadark',
     wordPressUrl: config.wordpressUrl,
-    siteUrl: 'https://www.thefalconlab.com/',
+    siteUrl: 'https://nickelbronx.com/',
     social: [
       {
         name: 'Instagram',
-        url: 'https://www.instagram.com/thefalconlab/',
+        url: 'https://www.instagram.com/nickelbronx/',
       },
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/company/falcon-design-and-print/',
+        url:
+          'https://www.linkedin.com/company/nickelbronx/https://www.linkedin.com/company/nickelbronx/',
       },
       {
         name: 'twitter',
-        url: 'https://twitter.com/thefalconlab/',
+        url: 'https://twitter.com/nickelbronx/',
       },
       {
         name: 'facebook',
-        url: 'https://www.facebook.com/thefalconlab',
+        url: 'https://www.facebook.com/nickelbronx/',
       },
-      {
-        name: 'youtube',
-        url: 'https://www.youtube.com/channel/UCsNpeIkuQ8FqyPBxu_INMZA/',
-      },
+      // {
+      //   name: 'youtube',
+      //   url: 'https://www.youtube.com/channel/UCsNpeIkuQ8FqyPBxu_INMZA/',
+      // },
     ],
   },
   plugins: [
