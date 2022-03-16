@@ -33,7 +33,10 @@ export default (props) => {
       </Flex>
       <Flex className="contactItem">
         <LocationIcon />
-        <Box dangerouslySetInnerHTML={{ __html: address }} />
+        <Box
+          dangerouslySetInnerHTML={{ __html: address }}
+          className="text-white"
+        />
       </Flex>
     </div>
   )

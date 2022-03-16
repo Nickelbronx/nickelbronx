@@ -61,8 +61,8 @@ const Footer = () => {
             <Menu menuName="marketing" sx={{ ...footerMenuStyles }} />
           </div>
         </div>
-        <div className="flex justify-end mt-5 text-sm text-white">
-          Nickel Bronx, Copyright {new Date().getFullYear()}
+        <div className="flex justify-center mt-5 text-sm text-center text-white">
+          NickelBronx, Copyright {new Date().getFullYear()}
         </div>
       </div>
     </footer>
