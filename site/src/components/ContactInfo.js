@@ -31,10 +31,10 @@ export default (props) => {
         <MailIcon className="text-xl text-white" />
         <a href={`mailto:${mail}`}>{mail}</a>
       </Flex>
-      {/* <Flex className="contactItem">
+      <Flex className="contactItem">
         <LocationIcon />
         <Box dangerouslySetInnerHTML={{ __html: address }} />
-      </Flex> */}
+      </Flex>
     </div>
   )
 }
