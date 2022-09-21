@@ -63,6 +63,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center mt-5 text-sm text-center text-white">
           NickelBronx, Copyright {new Date().getFullYear()}
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8151700.js"></script>
         </div>
       </div>
     </footer>
