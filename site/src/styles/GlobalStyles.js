@@ -43,7 +43,7 @@ export const globalStyles = theme => {
       margin: 0; /* 2 */
     }
 
-    .hubspot-form form input, hubspot-form form textarea {
+    .hubspot-form form input, .hubspot-form form textarea {
       border: none;
       background-color: #efefef;
       padding: 10px;
