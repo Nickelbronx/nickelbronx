@@ -43,6 +43,25 @@ export const globalStyles = theme => {
       margin: 0; /* 2 */
     }
 
+    .hubspot-form form input {
+      border: none;
+      background-color: #efefef;
+      padding: 10px;
+    }
+
+    .hubspot-form form fieldset {
+      margin-bottom: 8px;
+    }
+
+    .hubspot-form form fieldset input:first-child {
+      margin-right: 8px;
+    }
+
+    .hubspot-form form button {
+      background-color: #d83e00;
+      color: white;
+    }
+
     input {
       -moz-appearance: none;
       -webkit-appearance: none;
