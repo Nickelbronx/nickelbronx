@@ -16,7 +16,7 @@ const LAST_POSTS = graphql`
       }
     }
   }
-`
+`;
 
 const Footer = () => {
   const data = useStaticQuery(LAST_POSTS)

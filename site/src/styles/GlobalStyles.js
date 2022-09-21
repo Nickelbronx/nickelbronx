@@ -57,7 +57,7 @@ export const globalStyles = theme => {
       margin-right: 8px;
     }
 
-    .hubspot-form form button {
+    .hubspot-form form button, .hubspot-form form input[type="submit"]  {
       background-color: #d83e00;
       color: white;
     }
