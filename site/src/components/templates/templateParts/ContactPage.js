@@ -8,6 +8,7 @@ import { document } from 'browser-monads'
 
 export const ContactPage = ({ page, ...props }) => {
   useEffect(() => {
+    console.log('---');
     if (!document.getElementById('inputFile')) return;
     document.getElementById('inputFile').addEventListener('change', (e) => {
       document.querySelector('label').textContent = e.target.value
