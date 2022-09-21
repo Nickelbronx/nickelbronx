@@ -3,10 +3,35 @@ import { jsx, Container, Box } from 'theme-ui'
 import { useEffect } from 'react'
 import { ProjectHeader } from '../../project'
 import ContactInfo from '../../ContactInfo'
-import ParsedContent from '../../../utils/ParsedContent'
+// import ParsedContent from '../../../utils/ParsedContent'
 import { document } from 'browser-monads'
 
+const HubSpotForm = ({ formId = 'd467f1ef-12f8-48ca-8b50-8ad39c891934', portalId = '8151700' }) => {
+  useEffect(() => {
+      const script = document.createElement('script');
+      script.src='https://js.hsforms.net/forms/v2.js';
+      document.body.appendChild(script);
+
+      script.addEventListener('load', () => {
+          if (window.hbspt) {
+              window.hbspt.forms.create({
+                  portalId,
+                  formId,
+                  target: '#hubspot-form'
+              })
+          }
+      });
+  }, []);
+  return (
+    <div class="hubspot-form">
+      <div id="hubspot-form"></div>
+    </div>
+  )
+}
+
+
 export const ContactPage = ({ page, ...props }) => {
+  /*
   useEffect(() => {
     console.log('---');
     if (!document.getElementById('inputFile')) return;
@@ -16,12 +41,12 @@ export const ContactPage = ({ page, ...props }) => {
         .pop()
     })
   }, [])
+  */
 
   return (
     <div>
       <Container
-        sx={{ maxWidth: 'l', position: 'relative' }}
-        sx={{ ...styles }}
+        sx={{ maxWidth: 'l', position: 'relative', ...styles }}
         {...props}
       >
         <ProjectHeader
@@ -45,7 +70,7 @@ export const ContactPage = ({ page, ...props }) => {
             className="formContainer gsReveal"
             sx={{ width: ['100%', '100%', '60%'] }}
           >
-            <ParsedContent content={page.content} />
+            <HubSpotForm />
           </Box>
         </Box>
       </Container>
