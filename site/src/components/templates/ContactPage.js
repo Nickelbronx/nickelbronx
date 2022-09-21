@@ -4,6 +4,7 @@ import { ProjectHeader } from '../project'
 import ContactInfo from '../ContactInfo'
 import ParsedContent from '../../utils/ParsedContent'
 
+/* Contact Page Verified */
 const ContactPage = ({ page, ...props }) => {
   return (
     <Container
